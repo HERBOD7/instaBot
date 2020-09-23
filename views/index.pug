@@ -1,0 +1,60 @@
+extends layout
+
+block content
+    .container.py-3
+      .row
+        .col-md-12
+          h2.text-center.mb-3 SakooBot
+          hr.mb-4
+          #success.alert.alert-success.alert-dismissible.text-center
+            span.close(data-dismiss='alert')
+              | ×
+            | عملیات با موفقیت ثبت شد
+          #error.alert.alert-danger.alert-dismissible.text-center
+            span.close(data-dismiss='alert')
+              | ×
+            | خطایی رخ داده است
+          .row.justify-content-center
+            .col-md-6
+              span#formUserEdit.anchor
+              .card.card-outline-secondary
+                .card-header
+                  h3.mb-0 Follow
+                .card-body
+                  form.form(autocomplete='off', role='form')
+                    .form-group.row
+                      label.col-lg-3.col-form-label.form-control-label User ID
+                      .col-lg-9
+                        input.form-control.js-user-id(type='text', placeholder='sakoo.event')
+                    .form-group.row
+                      label.col-lg-3.col-form-label.form-control-label Follower Number
+                      .col-lg-9
+                        input.form-control.js-follwer-number(type='number', placeholder='1000')
+                    .form-group.row
+                      label.col-lg-3.col-form-label.form-control-label
+                      .col-lg-9
+                        .btn.btn-primary.js-btn-follow Start Following
+          .mb-4
+          .row.justify-content-center
+            .col-md-6
+              span#formUserEdit.anchor
+              .card.card-outline-secondary
+                .card-header
+                  h3.mb-0 Create User
+                .card-body
+                  form.form(autocomplete='off', role='form')
+                    .form-group.row
+                      label.col-lg-3.col-form-label.form-control-label User Number
+                      .col-lg-9
+                        input.form-control.js-user-number(type='text', placeholder='100000')
+                    .form-group.row
+                      label.col-lg-3.col-form-label.form-control-label
+                      .col-lg-9
+                        .btn.btn-primary.js-btn-create-user Create User
+
+    script(src='javascripts/jquery.min.js')
+    script(src='javascripts/bootstrap.min.js')
+    script(src='javascripts/bootstrap.bundle.min.js')
+    //- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    script(src='javascripts/index.js', type='text/javascript')
+
